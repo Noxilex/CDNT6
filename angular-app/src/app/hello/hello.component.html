@@ -1,14 +1,20 @@
 <div class="hello">
-    <h2 [style.color]="title.length > 5 ? 'red' : 'green'">{{ title }}</h2>
-    <ng-content></ng-content>
-
-    <div [innerHTML]="'Property Binding'"></div>
-
-    <!-- <div class="{{ 'hello' }}"></div> -->
-
-    <h3 [ngClass]="{'ft-30': 1 + 1 === 2}">Yeoman</h3>
-
-    <h3 [ngStyle]="{color: 1 == 1 ? 'lightgreen' : 'royalblue'}">Un super titre</h3>
-
-    <button [disabled]="title.length > 5">Détails</button>
+    <h2 class="hello-title" (click)="show=!show">{{ title }}</h2>
+    <hr class="hello-separator">
+    <div class="hello-content" *ngIf="show">
+        <ng-content></ng-content>
+    </div>
 </div>
+
+<!--
+<h2 [style.color]="title.length > 5 ? 'red' : 'green'">{{ title }}</h2>
+<div [innerHTML]="'Property Binding'"></div>
+
+<div class="{{ 'hello' }}"></div>
+
+<h3 [ngClass]="{'ft-30': 1 + 1 === 2}">Yeoman</h3>
+<h3 [ngStyle]="{color: 1 == 1 ? 'lightgreen' : 'royalblue'}">Un super titre</h3>
+
+<button [disabled]="title.length > 5">Détails</button>
+<button (click)="onClick()">Click Me</button>
+-->

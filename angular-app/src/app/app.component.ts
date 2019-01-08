@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-app';
+  ville = '';
+
+  onKeyUp(event: Event) {
+    const inputText = <HTMLInputElement> event.target;
+    this.ville = inputText.value;
+  }
+
 }

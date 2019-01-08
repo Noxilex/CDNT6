@@ -1,8 +1,28 @@
 .hello {
     border: 1px solid #CCC;
-    padding: 10px;
-    margin: 15px 0;
+    margin: 12px 0;
     background-color: #fff;
+    border-radius: 4px;
+    color: #222;
+}
+
+.hello-title,
+.hello-content {
+    padding: 8px 10px;
+}
+
+.hello-title {
+    margin: 0;
+    font-size: 20px;
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.hello-separator {
+    border: 0;
+    height: 1px;
+    background-color: #CCC;
+    margin: 0;
 }
 
 .ft-30 {

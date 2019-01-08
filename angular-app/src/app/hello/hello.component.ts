@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'app-hello',
@@ -6,6 +6,6 @@ import { Component } from "@angular/core";
     templateUrl: './hello.component.html'
 })
 export class HelloComponent {
-    title = 'Le titre de mon composent';
-    
+    show = true;
+    @Input() title = 'Le titre de mon composent';
 }

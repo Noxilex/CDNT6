@@ -1,15 +1,24 @@
 <div class="container">
-  <h1>Welcome to {{ title }} !</h1>
+  <h1 #foo>Welcome to {{ title }} !</h1>
+
+  {{ foo.textContent.length }}
 
   <input [(ngModel)]="prenom"> {{ prenom }}
 
-  <app-hello>
-    <p>Lorem ipsum dolor sit amet.</p>
+  <app-hello [title]="'Hello Component'">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tenetur?</p>
   </app-hello>
 
-  <app-hello>
-    <p>Lorem ipsum dolor sit amet.</p>
-  </app-hello>
+  <div>
+    <div>
+      <input (keyup)="onKeyUp($event)" placeholder="keyup">
+    </div>
+
+    <div>
+      <input [(ngModel)]="ville" placeholder="ngModel">
+    </div>
+
+    <p>{{ ville }}</p>
+  </div>
 
 </div>
