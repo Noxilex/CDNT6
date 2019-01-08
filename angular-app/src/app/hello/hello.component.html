@@ -1,0 +1,14 @@
+<div class="hello">
+    <h2 [style.color]="title.length > 5 ? 'red' : 'green'">{{ title }}</h2>
+    <ng-content></ng-content>
+
+    <div [innerHTML]="'Property Binding'"></div>
+
+    <!-- <div class="{{ 'hello' }}"></div> -->
+
+    <h3 [ngClass]="{'ft-30': 1 + 1 === 2}">Yeoman</h3>
+
+    <h3 [ngStyle]="{color: 1 == 1 ? 'lightgreen' : 'royalblue'}">Un super titre</h3>
+
+    <button [disabled]="title.length > 5">Détails</button>
+</div>
