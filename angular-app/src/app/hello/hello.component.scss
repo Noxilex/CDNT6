@@ -1,20 +1,28 @@
 .hello {
     border: 1px solid #CCC;
-    margin: 12px 0;
+    margin: 10px 0;
     background-color: #fff;
     border-radius: 4px;
     color: #222;
+    box-shadow: 0 0 5px rgba(182, 182, 182, 0.2);
+    transition: all .2s ease;
+}
+
+.hello:hover {
+    box-shadow: 0 2px 3px rgba(73, 73, 73, 0.2);
+    transform: translateY(1px);
 }
 
 .hello-title,
 .hello-content {
     padding: 8px 10px;
+    word-wrap: break-word;
 }
 
 .hello-title {
     margin: 0;
     font-size: 20px;
-    color: dodgerblue;
+    color: #2e86de;
     cursor: pointer;
 }
 

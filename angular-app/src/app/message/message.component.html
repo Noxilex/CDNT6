@@ -1,0 +1,9 @@
+<div class="message">
+    <textarea [maxLength]="maxChars" [(ngModel)]="text"></textarea>
+    <div>
+        <span [ngStyle]="{color: text.length >= maxChars ? 'red' : ''}">
+            {{ text.length }}/{{ maxChars }} Caractères
+        </span>
+        <button [disabled]="!text.length" (click)="onSend()">Envoyer</button>
+    </div>
+</div>

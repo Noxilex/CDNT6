@@ -14,4 +14,7 @@ export class AppComponent {
     this.ville = inputText.value;
   }
 
+  onMessage(msg: string) {
+    alert(msg);
+  }
 }

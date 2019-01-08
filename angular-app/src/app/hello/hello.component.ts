@@ -6,6 +6,6 @@ import { Component, Input } from "@angular/core";
     templateUrl: './hello.component.html'
 })
 export class HelloComponent {
-    show = true;
+    show = false;
     @Input() title = 'Le titre de mon composent';
 }
