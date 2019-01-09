@@ -4,6 +4,6 @@
         <span [ngStyle]="{color: text.length >= maxChars ? 'red' : ''}">
             {{ text.length }}/{{ maxChars }} Caractères
         </span>
-        <button [disabled]="!text.length" (click)="onSend()">Envoyer</button>
+        <button [disabled]="!text.trim()" (click)="onSend()">Envoyer</button>
     </div>
 </div>

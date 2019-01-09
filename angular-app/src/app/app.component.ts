@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-app';
   ville = '';
+  messages: {text: string, date: Date}[] = [];
 
   onKeyUp(event: Event) {
     const inputText = <HTMLInputElement> event.target;
@@ -15,6 +16,13 @@ export class AppComponent {
   }
 
   onMessage(msg: string) {
-    alert(msg);
+    this.messages.push({
+      text: msg,
+      date: new Date()
+    });
+  }
+
+  onDelete(index: number) {
+    this.messages.splice(index, 1);
   }
 }

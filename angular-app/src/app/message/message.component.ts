@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-message',
@@ -12,6 +12,9 @@ export class MessageComponent {
     text = '';
 
     onSend() {
-        this.textEvent.emit(this.text);
+        if (this.text.trim()) {
+            this.textEvent.emit(this.text);
+            this.text = '';
+        }
     }
 }
