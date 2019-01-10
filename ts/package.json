@@ -1,0 +1,21 @@
+{
+  "name": "aston-ts",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently tsc \"lite-server --baseDir=./\"",
+    "ts": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vincent Letourneau",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "lite-server": "^2.4.0",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "systemjs": "^2.1.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "allowJs": true,
+        "target": "es5",
+        "outDir": "./dist",
+        "watch": true,
+        "noEmitOnError": true
+    },
+    "files": [
+        "./src/main.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
