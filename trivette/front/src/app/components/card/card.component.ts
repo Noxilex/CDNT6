@@ -9,7 +9,7 @@ import { Movie } from 'src/app/models/movie.model';
 export class CardComponent implements OnInit {
   @Input() movie: Movie;
   showDetails: false;
-  
+
   constructor() { }
 
   ngOnInit() {
