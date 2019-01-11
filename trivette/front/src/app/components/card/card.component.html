@@ -1,0 +1,30 @@
+<!-- Card -->
+<mdb-card>
+  <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+    <!-- Card img -->
+    <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
+    <a>
+      <div class="mask"></div>
+    </a>
+  </div>
+  <!--Card content-->
+  <mdb-card-body>
+    <!--Title-->
+    <mdb-card-title>
+      <h4>{{ movie.title }}</h4>
+    </mdb-card-title>
+
+    <!--Text-->
+    <div *ngIf="showDetails">
+
+        <mdb-card-text>{{ movie.description }}</mdb-card-text>
+
+        <p><i class="fa fa-calendar"></i> {{ movie.date | date: "yyyy-MM-dd" }} </p>
+
+    </div>
+
+    <a mdbBtn color="primary" mdbWavesEffect (click)="showDetails = !showDetails"><i class="fa fa-info-circle "></i></a>
+    <ng-content></ng-content>
+  </mdb-card-body>
+</mdb-card>
+<!-- Card -->

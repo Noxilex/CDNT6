@@ -28,3 +28,15 @@ api.post('/movies', (req, res) => {
     res.status(201);
     res.json(req.body);
 });
+
+//Removes a movie with its ID
+api.delete('/movies/:id', (req, res) => {
+    const id = req.params.id;
+    const movieIndex = data.findIndex(movie => movie.id === parseInt(id, 10));
+    const movie = data.find(movie => movie.id === parseInt(id, 10));
+
+    data.splice(movieIndex, 1);
+    res.status(201);
+    res.json({"deletedElement": movie, "moviesList": data});
+
+});

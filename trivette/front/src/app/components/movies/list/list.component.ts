@@ -9,8 +9,10 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class ListComponent implements OnInit {
   movies: Movie[] = [];
-
-  constructor(private moviesService: MoviesService) { }
+  moviesService: MoviesService;
+  constructor(moviesService: MoviesService) {
+    this.moviesService = moviesService;
+  }
 
   ngOnInit() {
     this.moviesService
@@ -18,6 +20,23 @@ export class ListComponent implements OnInit {
       .subscribe(
         data => this.movies = data
       );
+  }
+
+  deleteMessage(index) {
+    const id = this.movies[index].id;
+    this.moviesService.deleteMovie(id)
+      .subscribe(
+        data => {
+          console.log('Delete successful');
+          this.movies.splice(index, 1);
+          console.log(data);
+        },
+        error => {
+          console.log('Delete error');
+          console.log(error);
+        }
+      );
+    // this.moviesService.
   }
 
 }
